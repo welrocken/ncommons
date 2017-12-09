@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("NCommons.Asp.Net")]
+[assembly: AssemblyTitle("NCommons.Domain")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("NCommons.Asp.Net")]
+[assembly: AssemblyProduct("NCommons.Domain")]
 [assembly: AssemblyCopyright("Copyright © 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("5fd85971-0b9e-43c1-9120-92cfc2d04a9a")]
+[assembly: Guid("ee97f068-1707-4dee-b756-31687e1d1966")]
 
 // Version information for an assembly consists of the following four values:
 //

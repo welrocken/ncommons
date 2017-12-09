@@ -1,4 +1,4 @@
-﻿namespace NCommons.Asp.Net.Utilities.String
+﻿namespace NCommons.Asp.Net.Utilities
 {
     public static class ControllerNameUtility
     {

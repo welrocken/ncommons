@@ -21,7 +21,7 @@ namespace NCommons.Asp.Net.Extensions
             where T : Controller
         {
             return UrlHelperUtilities.Action<T>(urlHelper,
-                                                actionName, 
+                                                actionName,
                                                 routeValues);
         }
 
@@ -30,46 +30,46 @@ namespace NCommons.Asp.Net.Extensions
                                        RouteValueDictionary routeValues)
             where T : Controller
         {
-            return UrlHelperUtilities.Action<T>(urlHelper, 
-                                                actionName, 
-                                                routeValues);
-        }
-
-        public static string Action<T>(this UrlHelper urlHelper, 
-                                       string actionName,
-                                       object routeValues, 
-                                       string protocol)
-            where T : Controller
-        {
             return UrlHelperUtilities.Action<T>(urlHelper,
-                                                actionName, 
-                                                routeValues, 
-												protocol);
+                                                actionName,
+                                                routeValues);
         }
 
         public static string Action<T>(this UrlHelper urlHelper,
                                        string actionName,
-                                       RouteValueDictionary routeValues, 
+                                       object routeValues,
                                        string protocol)
             where T : Controller
         {
-            return UrlHelperUtilities.Action<T>(urlHelper, 
-                                                actionName, 
-                                                routeValues, 
-												protocol);
+            return UrlHelperUtilities.Action<T>(urlHelper,
+                                                actionName,
+                                                routeValues,
+                                                protocol);
         }
 
-        public static string Action<T>(this UrlHelper urlHelper, 
+        public static string Action<T>(this UrlHelper urlHelper,
                                        string actionName,
-                                       RouteValueDictionary routeValues, 
-                                       string protocol, 
+                                       RouteValueDictionary routeValues,
+                                       string protocol)
+            where T : Controller
+        {
+            return UrlHelperUtilities.Action<T>(urlHelper,
+                                                actionName,
+                                                routeValues,
+                                                protocol);
+        }
+
+        public static string Action<T>(this UrlHelper urlHelper,
+                                       string actionName,
+                                       RouteValueDictionary routeValues,
+                                       string protocol,
                                        string hostName)
             where T : Controller
         {
-            return UrlHelperUtilities.Action<T>(urlHelper, 
-                                                actionName, 
-                                                routeValues, 
-												protocol, 
+            return UrlHelperUtilities.Action<T>(urlHelper,
+                                                actionName,
+                                                routeValues,
+                                                protocol,
                                                 hostName);
         }
     }
