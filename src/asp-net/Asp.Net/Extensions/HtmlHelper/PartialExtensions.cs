@@ -10,5 +10,28 @@ namespace NCommons.Asp.Net.Extensions
         {
             return PartialUtilities.Partial<T>(htmlHelper);
         }
+
+        public static MvcHtmlString Partial<T>(this HtmlHelper htmlHelper,
+                                               T model)
+        {
+            return PartialUtilities.Partial(htmlHelper, 
+                                            model);
+        }
+
+        public static MvcHtmlString Partial<T>(this HtmlHelper htmlHelper,
+                                               ViewDataDictionary viewData)
+        {
+            return PartialUtilities.Partial<T>(htmlHelper,
+                                               viewData);
+        }
+
+        public static MvcHtmlString Partial<T>(this HtmlHelper htmlHelper,
+                                               T model,
+                                               ViewDataDictionary viewData)
+        {
+            return PartialUtilities.Partial(htmlHelper,
+                                            model,
+                                            viewData);
+        }
     }
 }

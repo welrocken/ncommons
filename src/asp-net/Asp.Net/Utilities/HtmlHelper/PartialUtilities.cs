@@ -10,11 +10,43 @@ namespace NCommons.Asp.Net.Utilities
     {
         public static MvcHtmlString Partial<T>(HtmlHelper htmlHelper)
         {
+            var fileName = GetFileName<T>();
+
+            return htmlHelper.Partial(fileName);
+        }
+
+        public static MvcHtmlString Partial<T>(HtmlHelper htmlHelper,
+                                               T model)
+        {
+            var fileName = GetFileName<T>();
+
+            return htmlHelper.Partial(fileName, model);
+        }
+
+        public static MvcHtmlString Partial<T>(HtmlHelper htmlHelper,
+                                               ViewDataDictionary viewData)
+        {
+            var fileName = GetFileName<T>();
+
+            return htmlHelper.Partial(fileName, viewData);
+        }
+
+        public static MvcHtmlString Partial<T>(HtmlHelper htmlHelper,
+                                               T model,
+                                               ViewDataDictionary viewData)
+        {
+            var fileName = GetFileName<T>();
+
+            return htmlHelper.Partial(fileName, model, viewData);
+        }
+
+        private static string GetFileName<T>()
+        {
             var type = typeof(T);
 
             string fileNameToSearch = null;
 
-            var attributes = type.GetCustomAttributes(typeof(PartialViewAttribute), false));
+            var attributes = type.GetCustomAttributes(typeof(PartialViewAttribute), false);
             if (attributes.Length <= 0)
                 fileNameToSearch = type.Name;
             else
@@ -30,9 +62,9 @@ namespace NCommons.Asp.Net.Utilities
             if (fileName == null)
                 throw new InvalidOperationException("Invalid operation"); // TODO: Appropriate message
 
-            return htmlHelper.Partial(fileName);
+            return fileName;
         }
-        
+
         private static string SearchFile(string fileName)
         {
             var sharedViews = HostingEnvironment.MapPath("~/Views/Shared");
