@@ -1,14 +1,15 @@
-﻿namespace NCommons.Eroman
+﻿using System;
+
+namespace NCommons.Eroman
 {
-    public class Error : IError
+    public class Error : Exception, IError
     {
         public virtual int Code { get; }
-        public virtual string Message { get; }
 
-        public Error(int code, string message)
+        public Error(int code, string message) 
+            : base(message)
         {
             Code = code;
-            Message = message;
         }
     }
 }
