@@ -3,7 +3,7 @@
     public interface IValidationResult<TError>
     {
         TError Error { get; }
-        bool Success { get; }
+        bool Valid { get; }
     }
 
     public interface IValidationResult : IValidationResult<object>
