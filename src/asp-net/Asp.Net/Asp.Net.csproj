@@ -58,11 +58,13 @@
     <Compile Include="Attributes\PartialViewAttribute.cs" />
     <Compile Include="Extensions\HtmlHelper\PartialExtensions.cs" />
     <Compile Include="Extensions\UrlHelper\ActionExtensions.cs" />
-    <Compile Include="Extensions\UrlHelper\ActionLinqExtensions.cs" />
+    <Compile Include="Extensions\UrlHelper\ActionExpressionExtensions.cs" />
+    <Compile Include="Extensions\UrlHelper\ActionMemberExpressionExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\HtmlHelper\PartialUtilities.cs" />
     <Compile Include="Utilities\String\ControllerNameUtility.cs" />
-    <Compile Include="Utilities\UrlHelper\ActionLinqUtilities.cs" />
+    <Compile Include="Utilities\UrlHelper\ActionExpressionUtilities.cs" />
+    <Compile Include="Utilities\UrlHelper\ActionMemberExpressionUtilities.cs" />
     <Compile Include="Utilities\UrlHelper\ActionUtilities.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -5,7 +5,7 @@ using System.Web.Routing;
 
 namespace NCommons.Asp.Net.Utilities
 {
-    public static partial class UrlHelperLinqUtilities
+    public static partial class UrlHelperUtilities
     {
         public static string Action<T>(UrlHelper urlHelper,
                                        Expression<Func<T, string>> actionNameExpression)

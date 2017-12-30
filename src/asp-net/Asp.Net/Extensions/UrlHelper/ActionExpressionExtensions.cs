@@ -13,8 +13,8 @@ namespace NCommons.Asp.Net.Extensions
                                        Expression<Func<T, string>> actionNameExpression)
             where T : Controller
         {
-            return UrlHelperLinqUtilities.Action<T>(urlHelper,
-                                                    actionNameExpression);
+            return UrlHelperUtilities.Action<T>(urlHelper,
+                                                actionNameExpression);
         }
 
         public static string Action<T>(this UrlHelper urlHelper,
@@ -22,9 +22,9 @@ namespace NCommons.Asp.Net.Extensions
                                        object routeValues)
             where T : Controller
         {
-            return UrlHelperLinqUtilities.Action<T>(urlHelper,
-                                                    actionNameExpression,
-                                                    routeValues);
+            return UrlHelperUtilities.Action<T>(urlHelper,
+                                                actionNameExpression,
+                                                routeValues);
         }
 
         public static string Action<T>(UrlHelper urlHelper,
@@ -32,9 +32,9 @@ namespace NCommons.Asp.Net.Extensions
                                        RouteValueDictionary routeValues)
             where T : Controller
         {
-            return UrlHelperLinqUtilities.Action<T>(urlHelper,
-                                                    actionNameExpression,
-                                                    routeValues);
+            return UrlHelperUtilities.Action<T>(urlHelper,
+                                                actionNameExpression,
+                                                routeValues);
         }
 
         public static string Action<T>(UrlHelper urlHelper,
@@ -43,10 +43,10 @@ namespace NCommons.Asp.Net.Extensions
                                        string protocol)
             where T : Controller
         {
-            return UrlHelperLinqUtilities.Action<T>(urlHelper,
-                                                    actionNameExpression,
-                                                    routeValues,
-                                                    protocol);
+            return UrlHelperUtilities.Action<T>(urlHelper,
+                                                actionNameExpression,
+                                                routeValues,
+                                                protocol);
         }
 
         public static string Action<T>(UrlHelper urlHelper,
@@ -55,10 +55,10 @@ namespace NCommons.Asp.Net.Extensions
                                        string protocol)
             where T : Controller
         {
-            return UrlHelperLinqUtilities.Action<T>(urlHelper,
-                                                    actionNameExpression,
-                                                    routeValues,
-                                                    protocol);
+            return UrlHelperUtilities.Action<T>(urlHelper,
+                                                actionNameExpression,
+                                                routeValues,
+                                                protocol);
         }
 
         public static string Action<T>(UrlHelper urlHelper,
@@ -68,11 +68,11 @@ namespace NCommons.Asp.Net.Extensions
                                        string hostName)
             where T : Controller
         {
-            return UrlHelperLinqUtilities.Action<T>(urlHelper,
-                                                    actionNameExpression,
-                                                    routeValues,
-                                                    protocol,
-                                                    hostName);
+            return UrlHelperUtilities.Action<T>(urlHelper,
+                                                actionNameExpression,
+                                                routeValues,
+                                                protocol,
+                                                hostName);
         }
     }
 }
